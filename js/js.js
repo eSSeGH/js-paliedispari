@@ -18,25 +18,28 @@ console.log(isPalindrome(word))
 // PARI E DISPARI
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 
-// let pick = ""
-// let lowerCasePick = ""
+let pick = ""
+let lowerCasePick = ""
 
-// do {
+while (lowerCasePick != "pari" && lowerCasePick != "dispari") {
 
-//     pick = prompt("pari o dispari")
-//     console.log(pick)
+    pick = prompt("pari o dispari")
+    console.log(pick)
 
-// }while (lowerCasePick = "pari" || lowerCasePick = "dispari") {
+    lowerCasePick = pick.toLowerCase()
+    console.log(lowerCasePick)
+}
 
-//     pick = prompt("pari o dispari")
-//     console.log(pick)
-// }
-
-// let lowerCasePick = pick.toLowerCase()
-// console.log(lowerCasePick)
-
+let userNum = prompt("scegli un numero da 1 a 5")
+console.log(userNum)
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+
+let cpuNum = 0
+
+randMinMax(cpuNum, 1, 5)
+console.log(randMinMax(cpuNum, 1, 5))
+
 // Sommiamo i due numeri
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Comunichiamo all’utente chi ha vinto. (decidete voi come)
@@ -60,4 +63,11 @@ function isPalindrome(string) {
     } else {
         return false
     }
+}
+
+function randMinMax(variable, min, max) {
+
+    variable = Math.floor(Math.random() * (max - min + 1)) + min
+
+    return variable
 }

@@ -16,7 +16,7 @@ console.log(isPalindrome(word))
 
 
 // PARI E DISPARI
-// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5 (con controllo)
 
 let pick = ""
 let lowerCasePick = ""
@@ -30,7 +30,16 @@ while (lowerCasePick != "pari" && lowerCasePick != "dispari") {
     console.log(lowerCasePick)
 }
 
-let userNum = parseInt(prompt("scegli un numero da 1 a 5"))
+let userNum = 0
+
+isNaNUserNum = isNaN(userNum)
+console.log(isNaNUserNum)
+
+while (isNaNUserNum === true || userNum <= 0 || userNum >= 6) {
+
+    userNum = parseInt(prompt("scegli un numero da 1 a 5"))
+}
+
 console.log("l'utente ha scelto:", userNum)
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).

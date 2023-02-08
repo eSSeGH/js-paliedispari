@@ -32,12 +32,13 @@ while (lowerCasePick != "pari" && lowerCasePick != "dispari") {
 
 let userNum = 0
 
-isNaNUserNum = isNaN(userNum)
-console.log(isNaNUserNum)
+let isNaNUserNum = true
 
 while (isNaNUserNum === true || userNum <= 0 || userNum >= 6) {
 
     userNum = parseInt(prompt("scegli un numero da 1 a 5"))
+
+    isNaNUserNum = isNaN(userNum)
 }
 
 console.log("l'utente ha scelto:", userNum)
@@ -59,7 +60,7 @@ console.log(sum)
 
 let isEvenSum = isEven(sum)
 
-if (isEvenSum = true) {
+if (isEvenSum === true) {
     console.log("Il risultato è: Pari")
 } else {
     console.log("Il risultato è: Dispari")
@@ -67,16 +68,16 @@ if (isEvenSum = true) {
 
 // Comunichiamo all’utente chi ha vinto. (decidete voi come)
 
-if (isEvenSum = true && lowerCasePick === "pari") {
+if (isEvenSum === true && lowerCasePick === "pari") {
     console.log("HAI VINTO! :)")
     
-} else if (isEvenSum = false && lowerCasePick === "pari") {
+} else if (isEvenSum === false && lowerCasePick === "pari") {
     console.log("HAI PERSO! :'(")
 
-} else if (isEvenSum = true && lowerCasePick === "dispari") {
+} else if (isEvenSum === true && lowerCasePick === "dispari") {
     console.log("HAI PERSO! :'(")
 
-} else if (isEvenSum = true && lowerCasePick === "dispari") {
+} else if (isEvenSum === true && lowerCasePick === "dispari") {
     console.log("HAI VINTO! :)")
 }
 

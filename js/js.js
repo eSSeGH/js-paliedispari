@@ -48,19 +48,11 @@ console.log(isPalindrome(word))
 function isPalindrome(string) {
 
     let maiuscString = string.toUpperCase()
-    console.log(maiuscString)
-    console.log(maiuscString.length)
-
     let revString = ""
 
     for (i = maiuscString.length - 1; i > -1; i--) {
-
-        console.log(i)
-        console.log(maiuscString[i])
     
-        revString += maiuscString[i]
-        console.log(revString)
-        
+        revString += maiuscString[i]  
     }
 
     if ( revString === maiuscString) {

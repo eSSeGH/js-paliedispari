@@ -26,11 +26,9 @@ while (lowerCasePick != "pari" && lowerCasePick != "dispari") {
 
 console.log("l'utente ha scelto:", lowerCasePick)
 
-let userNum = 0
+let userNum 
 
-let isNaNUserNum = true
-
-while (isNaNUserNum === true || userNum <= 0 || userNum >= 6) {
+while (isNaN(userNum) || userNum <= 0 || userNum > 5) {
 
     userNum = parseInt(prompt("scegli un numero da 1 a 5"))
 

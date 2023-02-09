@@ -6,14 +6,10 @@ console.log("la parola è", word)
 
 // Creare una funzione per capire se la parola inserita è palindroma (VEDI IN FONDO)
 
-
 // Comunicare all utente (decidete voi come) se la parola che ha inserito
 // è palindroma oppure no
 
 console.log(isPalindrome(word))
-
-
-
 
 // PARI E DISPARI
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5 (con controllo)
@@ -24,11 +20,11 @@ let lowerCasePick = ""
 while (lowerCasePick != "pari" && lowerCasePick != "dispari") {
 
     pick = prompt("pari o dispari")
-    console.log(pick)
 
     lowerCasePick = pick.toLowerCase()
-    console.log(lowerCasePick)
 }
+
+console.log("l'utente ha scelto:", lowerCasePick)
 
 let userNum = 0
 
@@ -58,9 +54,7 @@ console.log(sum)
 
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 
-let isEvenSum = isEven(sum)
-
-if (isEvenSum === true) {
+if (isEven(sum) === true) {
     console.log("Il risultato è: Pari")
 } else {
     console.log("Il risultato è: Dispari")
@@ -68,16 +62,16 @@ if (isEvenSum === true) {
 
 // Comunichiamo all’utente chi ha vinto. (decidete voi come)
 
-if (isEvenSum === true && lowerCasePick === "pari") {
+if (isEven(sum) === true && lowerCasePick === "pari") {
     console.log("HAI VINTO! :)")
     
-} else if (isEvenSum === false && lowerCasePick === "pari") {
+} else if (isEven(sum) === false && lowerCasePick === "pari") {
     console.log("HAI PERSO! :'(")
 
-} else if (isEvenSum === true && lowerCasePick === "dispari") {
+} else if (isEven(sum) === true && lowerCasePick === "dispari") {
     console.log("HAI PERSO! :'(")
 
-} else if (isEvenSum === true && lowerCasePick === "dispari") {
+} else if (isEven(sum) === true && lowerCasePick === "dispari") {
     console.log("HAI VINTO! :)")
 }
 
